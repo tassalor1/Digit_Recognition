@@ -1,1 +1,1 @@
-# MNIST_Digit-_Recognition
+# MNIST_Digit_Recognition
