@@ -6,7 +6,7 @@ DEPENDACIES
 
 The following libraries are used in this project:
 
-pandas
+pandas \n
 numpy
 seaborn
 sklearn
