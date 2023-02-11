@@ -5,11 +5,13 @@ This project is a machine learning model that is trained to recognize handwritte
 DEPENDACIES
 
 The following libraries are used in this project:
+
 pandas/
 numpy/
 seaborn/
 sklearn/
 matplotlib/
+
 
 DATA
 
