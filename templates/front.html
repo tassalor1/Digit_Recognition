@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="https://unpkg.com/98.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 50%;
+      flex-wrap: wrap;
+    }
+
+    .window {
+      width: 200%;
+      max-width: 400px;
+      height: 450px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="window" style="margin-right: 10px;">
+      <div class="title-bar">
+        <div class="title-bar-text">MNIST Digit Recognition</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div id="drop-area" style="border: 2px dashed black; padding: 10px; text-align: center;
+        height: 260px; width: 360px;">
+          Drag and drop digits here
+        </div>
+      </div>
+    </div>
+    <div class="window" style="margin-left: 10px;">
+      <div class="title-bar">
+        <div class="title-bar-text">MNIST Digit Recognition Results</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+      </div>
+    </div>
+  </div>
+  <!-- Javascript for drag and drop-->
+  <script>
+    // Get the drop area element
+    const dropArea = document.getElementById("drop-area");
+
+    // Prevent the default behavior for the dragover event
+    dropArea.addEventListener("dragover", (event) => {
+      event.preventDefault();
+    });
+
+    // Handle the drop event
+    dropArea.addEventListener("drop", (event) => {
+      event.preventDefault();
+      console.log("Files dropped:", event.dataTransfer.files);
+    });
+  </script>
+</body>
+</html>
