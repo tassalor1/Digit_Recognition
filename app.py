@@ -19,5 +19,5 @@ def predict():
 
     return render_template('front.html')
 
-if __name__ == "--main__":
-    app.run(port=500, debug=True)
+if __name__  == "--main__":
+    app.run(port=5000, debug=True)
