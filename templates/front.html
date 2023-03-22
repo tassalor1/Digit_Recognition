@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>MNIST Digit Recognition</title>
   <link rel="stylesheet" href="https://unpkg.com/98.css">
   <style>
     body {
@@ -57,7 +57,8 @@
         </div>
       </div>
       <div class="window-body">
-      </div>
+      <div id="result" style="font-size: 24px; text-align: center; padding: 20px;">
+        Predicted digit will appear here
     </div>
   </div>
   <!-- Javascript for drag and drop-->
@@ -71,10 +72,35 @@
     });
 
     // Handle the drop event
-    dropArea.addEventListener("drop", (event) => {
+    dropArea.addEventListener("drop", async (event) => {
       event.preventDefault();
-      console.log("Files dropped:", event.dataTransfer.files);
+      const file = event.dataTransfer.files[0];
+      if (file.type.startsWith("image/")) {
+        const base64Image = await toBase64(file);
+        fetch("/predict", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ image: base64Image })
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log("Predicted digit:", data.digit);
+          // Update the result window with the predicted digit
+          document.getElementById("result").innerHTML = "Predicted digit: " + data.digit;
+        });
+      }
     });
+
+    function toBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = (e) => resolve(e.target.result);
+        reader.onerror = (e) => reject(e);
+        reader.readAsDataURL(file);
+      });
+    }
   </script>
 </body>
 </html>
