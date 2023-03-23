@@ -3,12 +3,12 @@ import base64
 from PIL import Image
 from flask import Flask, request, render_template, jsonify
 from flask_cors import CORS
-import pickle
+from tensorflow.keras.models import load_model
 import numpy as np
 
 app = Flask(__name__)
 CORS(app)
-model = pickle.load(open('random_forest_model.pkl', 'rb'))
+model = load_model('cnn2_model.h5')
 
 @app.route('/')
 def home():
@@ -23,14 +23,14 @@ def predict():
     # Load the image and preprocess it
     image = Image.open(io.BytesIO(image_data))
     image = image.convert('L') # Convert to grayscale
-    image = image.resize((28, 28), Image. LANCZOS) # Resize the image to 28x28
-    image_array = np.asarray(image).reshape(1, -1) # Convert to NumPy array and flatten
+    image = image.resize((28, 28), Image.LANCZOS) # Resize the image to 28x28
+    image_array = np.asarray(image).reshape(1, 28, 28, 1) / 255.0 #  Convert to NumPy array, flatten, and normalize
 
     # Predict the digit
     prediction = model.predict(image_array)
-    output = int(prediction[0])
+    output = np.argmax(prediction)
 
-    return jsonify({"digit": output})
+    return jsonify({"digit": int(output)})
 
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
