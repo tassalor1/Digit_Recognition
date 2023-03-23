@@ -1,6 +1,6 @@
 import io
 import base64
-from PIL import Image
+from PIL import Image, ImageOps
 from flask import Flask, request, render_template, jsonify
 from flask_cors import CORS
 from tensorflow.keras.models import load_model
@@ -23,6 +23,7 @@ def predict():
     # Load the image and preprocess it
     image = Image.open(io.BytesIO(image_data))
     image = image.convert('L') # Convert to grayscale
+    image = ImageOps.invert(image)  # Invert the colors to black background and white number
     image = image.resize((28, 28), Image.LANCZOS) # Resize the image to 28x28
     image_array = np.asarray(image).reshape(1, 28, 28, 1) / 255.0 #  Convert to NumPy array, flatten, and normalize
 
