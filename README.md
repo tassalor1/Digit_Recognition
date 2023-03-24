@@ -39,3 +39,11 @@ The project utilizes a range of technologies, algorithms, and libraries to achie
 
 This project demonstrates the application of deep learning techniques to solve real-world problems and provides an interactive way to explore handwritten digit recognition using a powerful CNN model and a user-friendly interface.
 
+# To-Do
+
+These are the planned features and improvements for the project:
+
+1. Improve the user interface for better usability.
+2. Optimize the CNN model for colored backgrounds and numbers.
+3. Add support for recognizing multiple digits in a single image.
+4. Implement a feature to save the user's input images for future model retraining.
