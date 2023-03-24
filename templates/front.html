@@ -22,14 +22,12 @@ icon from https://win98icons.alexmeub.com/
       min-height: 100vh;
       margin: 0;
     }
-
     body {
       background-image: url("/static/1719894.png");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
     }
-
     .container {
       display: flex;
       justify-content: space-between;
@@ -47,7 +45,6 @@ icon from https://win98icons.alexmeub.com/
       font-size: 50px;
       font-weight: normal;
     }
-
     .window {
       width: 50%;
       max-width: 250px;
@@ -56,7 +53,7 @@ icon from https://win98icons.alexmeub.com/
     }
     .icon-container {
       position: absolute;
-      bottom: 90px;
+      bottom: 30px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
@@ -70,18 +67,15 @@ icon from https://win98icons.alexmeub.com/
       flex-direction: column;
       align-items: center;
     }
-
     .icon-comp {
       width: 32px;
       height: 32px;
       display: block;
     }
-
     .icon-text {
       font-family: 'PixeloidSans', sans-serif;
       margin-top: 5px;
       font-size: 15px;
-
     }
     .face-icon {
       width: 32px;
@@ -141,12 +135,10 @@ icon from https://win98icons.alexmeub.com/
   <script>
     // Get the drop area element
     const dropArea = document.getElementById("drop-area");
-
     // Prevent the default behavior for the dragover event
     dropArea.addEventListener("dragover", (event) => {
       event.preventDefault();
     });
-
     // Handle the drop event
     dropArea.addEventListener("drop", async (event) => {
       event.preventDefault();
@@ -168,7 +160,6 @@ icon from https://win98icons.alexmeub.com/
         });
       }
     });
-
     function toBase64(file) {
       return new Promise((resolve, reject) => {
         const reader = new FileReader();
