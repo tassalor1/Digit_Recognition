@@ -5,6 +5,7 @@ from flask import Flask, request, render_template, jsonify
 from flask_cors import CORS
 from tensorflow.keras.models import load_model
 import numpy as np
+from mangum import Mangum
 
 app = Flask(__name__)
 CORS(app)
@@ -33,6 +34,5 @@ def predict():
 
     return jsonify({"digit": int(output)})
 
-if __name__ == "__main__":
-    app.run(port=5000, debug=True)
+lambda_handler = Mangum(app)
 
