@@ -1,0 +1,15 @@
+{
+  "ModelName": "DigitRecognitionModel",
+  "PrimaryContainer": {
+    "Image": "763104351884.dkr.ecr.eu-west-2.amazonaws.com/tensorflow-inference:2.6.0-cpu",
+    "ModelDataUrl": "s3://clam-bucket/MNIST_Digit_Recognition.zip",
+    "Environment": {
+      "SAGEMAKER_PROGRAM": "main.py",
+      "SAGEMAKER_SUBMIT_DIRECTORY": "/opt/ml/model/code",
+      "SAGEMAKER_CONTAINER_LOG_LEVEL": "20",
+      "SAGEMAKER_REGION": "eu-west-2",
+      "SAGEMAKER_MODEL_SERVER_TIMEOUT": "300"
+    }
+  },
+  "ExecutionRoleArn": "arn:aws:iam::292690594311:role/SageMakerExecutionRole2"
+}
