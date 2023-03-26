@@ -1,6 +1,6 @@
 # Digit_Recognition
 
-Visit the website: [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+Visit the website: 
 
 This repository contains a Convolutional Neural Network (CNN) model for recognising handwritten digits using the MNIST dataset, along with a simple web-based front end for digit classification and a Flask backend for serving the model.
 
