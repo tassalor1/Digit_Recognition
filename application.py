@@ -5,17 +5,16 @@ from flask import Flask, request, render_template, jsonify
 from flask_cors import CORS
 from tensorflow.keras.models import load_model
 import numpy as np
-from mangum import Mangum
 
-app = Flask(__name__)
-CORS(app)
+application = Flask(__name__)
+CORS(application)
 model = load_model('cnn2_model.h5')
 
-@app.route('/')
+@application.route('/')
 def home():
     return render_template('front.html')
 
-@app.route('/predict', methods=['POST'])
+@application.route('/predict', methods=['POST'])
 def predict():
     # Get the base64 image data from the request
     image_data = request.json['image']
@@ -34,5 +33,5 @@ def predict():
 
     return jsonify({"digit": int(output)})
 
-lambda_handler = Mangum(app)
-
+if __name__ == "__main__":
+    application.run(debug=True)
