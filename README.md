@@ -2,7 +2,7 @@
 
 Visit the website: http://ec2-18-132-248-127.eu-west-2.compute.amazonaws.com/
 
-This repository contains a Convolutional Neural Network (CNN) model for recognising handwritten digits using the MNIST dataset, along with a simple web-based front end for digit classification and a Flask backend for serving the model.
+This repository contains a Convolutional Neural Network model for recognising handwritten digits using the MNIST dataset, deployed on an AWS EC2 instance using Nginx as a reverse proxy server and Flask as a web framework.
 
 ## **Overview**
 The goal of this project is to create an easy-to-use application that enables users to input a digit image through drag and drop and receive a classification from the trained CNN model. The project consists of three main components:
