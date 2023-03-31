@@ -145,7 +145,7 @@ icon from https://win98icons.alexmeub.com/
       const file = event.dataTransfer.files[0];
       if (file.type.startsWith("image/")) {
         const base64Image = await toBase64(file);
-        fetch("/api/predict", {
+        fetch("/api/predict/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"

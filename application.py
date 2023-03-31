@@ -14,7 +14,7 @@ model = load_model('cnn2_model.h5')
 def home():
     return render_template('front.html')
 
-@application.route('/api/predict', methods=['POST'])
+@application.route('/api/predict/', methods=['POST'])
 def predict():
     # Get the base64 image data from the request
     image_data = request.json['image']
