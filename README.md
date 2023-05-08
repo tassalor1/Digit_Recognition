@@ -7,7 +7,7 @@ This repository contains a Convolutional Neural Network model for recognising ha
 ## **Overview**
 The goal of this project is to create an easy-to-use application that enables users to input a digit image through drag and drop and receive a classification from the trained CNN model. The project consists of three main components:
 
-**CNN Model**: A deep learning model built using TensorFlow and Keras, trained on the MNIST dataset for handwritten digit recognition. The model architecture includes multiple convolutional layers, pooling layers, dropout layers, and a fully connected dense layer to perform the classification task. The model achieves a 98.93% test accuracy score in recognizing the digits from the dataset.
+**CNN Model**: A deep learning model built using TensorFlow and Keras, trained on the MNIST dataset for handwritten digit recognition. The model architecture includes multiple convolutional layers, pooling layers, dropout layers, and a fully connected dense layer to perform the classification task. The model achieves a 98.93% test accuracy score in recognising the digits from the dataset.
 
 **Front-end**: A simple web interface built with HTML, CSS, and JavaScript, where users can drag and drop digit images and receive the classification results.The design is styled using the [98.css](https://jdan.github.io/98.css/#table-view) library, which gives the interface a retro Windows 98-inspired appearance, and incorporates icons from the [Win98 Icons](https://win98icons.alexmeub.com/)
  collection for a consistent vintage look.
@@ -15,12 +15,12 @@ The goal of this project is to create an easy-to-use application that enables us
 **Back-end**: A lightweight Flask server that serves the model and handles requests from the front-end. The server loads the trained CNN model and exposes an API for receiving digit images from the front-end. Upon receiving an image, the server preprocesses it and feeds it to the CNN model for prediction. The predicted digit is then sent back to the front-end to be displayed to the user.
 
 ## **Tech Stack, Algorithms, and Libraries**
-The project utilizes a range of technologies, algorithms, and libraries to achieve its objectives:
+The project utilises a range of technologies, algorithms, and libraries to achieve its objectives:
 
 ## **Tech Stack**
 * **Front-end**: HTML, CSS, and JavaScript
 
-* **Back-end**: Flask (Python web framework)
+* **Back-end**: Flask 
 
 * **Deep Learning**: Python, TensorFlow and Keras
 
@@ -43,8 +43,8 @@ These are the planned features and improvements for the project:
 
 1. Improve the user interface for better usability.
 2. Mobile friendly
-3. Optimize the CNN model for colored backgrounds and numbers.
-4. Add support for recognizing multiple digits in a single image.
+3. Optimise the CNN model for colored backgrounds and numbers.
+4. Add support for recognising multiple digits in a single image.
 5. Implement a feature to save the user's input images for future model retraining.
 
 
