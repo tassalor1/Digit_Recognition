@@ -41,11 +41,11 @@ This project demonstrates the application of deep learning techniques to solve r
 
 These are the planned features and improvements for the project:
 
-1. Improve the user interface for better usability.
+1. Improve the user interface for better usability
 2. Mobile friendly
-3. Optimise the CNN model for colored backgrounds and numbers.
-4. Add support for recognising multiple digits in a single image.
-5. Implement a feature to save the user's input images for future model retraining.
+3. Optimise the CNN model for colored backgrounds and numbers
+4. Add support for recognising multiple digits in a single image
+5. Implement a feature to save the user's input images for future model retraining
 
 
 
