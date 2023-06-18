@@ -1,6 +1,5 @@
 # Digit_Recognition
 
-Visit the website: http://ec2-18-132-248-127.eu-west-2.compute.amazonaws.com/
 
 This repository contains a Convolutional Neural Network model for recognising handwritten digits using the MNIST dataset, deployed on an AWS EC2 instance using Nginx as a reverse proxy server and Flask as a web framework.
 
