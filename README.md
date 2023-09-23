@@ -1,6 +1,6 @@
 # Digit_Recognition
 
-
+## ** Currently Offline **
 This repository contains a Convolutional Neural Network model for recognising handwritten digits using the MNIST dataset, deployed on an AWS EC2 instance using Nginx as a reverse proxy server and Flask as a web framework.
 
 ## **Overview**
@@ -35,16 +35,6 @@ The project utilises a range of technologies, algorithms, and libraries to achie
 * **98.css**
 
 This project demonstrates the application of deep learning techniques to solve real-world problems and provides an interactive way to explore handwritten digit recognition using a powerful CNN model and a user-friendly interface.
-
-# To-Do
-
-These are the planned features and improvements for the project:
-
-1. Improve the user interface for better usability
-2. Mobile friendly
-3. Optimise the CNN model for colored backgrounds and numbers
-4. Add support for recognising multiple digits in a single image
-5. Implement a feature to save the user's input images for future model retraining
 
 
 
